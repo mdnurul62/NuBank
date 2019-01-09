@@ -10,19 +10,42 @@ public class Account {
         return accountNumber;
     }
     public void setAccountNumber(String accountNumber){
-        this.accountNumber = accountNumber;
+        if(accountNumber != null) {
+            if (accountNumber.trim().contentEquals("")) {
+                throw new RuntimeException("Please provide correct number.");
+            } else if ((accountNumber.trim()).length() < 7) {
+                throw new RuntimeException("Account number must be equal or greater than 7 digits.");
+            } else {
+                this.accountNumber = accountNumber;
+            }
+        } else {
+            throw new NullPointerException("Account number can not be null.");
+        }
     }
-
     public String getAccountName(){
         return accountName = "Nurul";
     }
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
-
     public  double getBalance(){
-        return balance = 2000.00;
+        return balance;
     }
-
+    public void deposit(double amount){
+        if(amount <= 0){
+            throw new RuntimeException("Invalid amount");
+        } else {
+            balance = balance + amount;
+        }
+    }
+    public void withdrawal(double amount){
+        if(amount <= 0) {
+            throw new RuntimeException("It's not a valid amount.");
+        } else if(amount > balance){
+            throw  new RuntimeException("not a sufficient balance");
+        } else {
+            balance = balance - amount;
+        }
+    }
 
 }

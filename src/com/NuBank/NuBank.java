@@ -12,10 +12,12 @@ public class NuBank {
         //create an instance of Account
         myAccount = new Account();
 
-        myAccount.getAccountName();
+//        myAccount.getAccountName();
         myAccount.setAccountName("Nurul");
-        myAccount.getAccountNumber();
-        myAccount.setAccountNumber("12345");
+//        myAccount.getAccountNumber();
+        myAccount.setAccountNumber("12345678");
+        myAccount.deposit(1110);
+//        myAccount.withdrawal(2000.0);
         myAccount.getBalance();
 
         System.out.println("Name of account holder: " + myAccount.getAccountName());
