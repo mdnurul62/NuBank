@@ -4,7 +4,7 @@ public class Account {
     //declare variable with access modifier public
     private String accountNumber;
     private String accountName;
-    private double balance;
+    protected double balance;
 
     public String getAccountNumber(){
         return accountNumber;
@@ -23,7 +23,7 @@ public class Account {
         }
     }
     public String getAccountName(){
-        return accountName = "Nurul";
+        return accountName;
     }
     public void setAccountName(String accountName) {
         this.accountName = accountName;
