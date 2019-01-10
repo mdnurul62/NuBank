@@ -8,18 +8,18 @@ public class NuBank {
         System.out.println("*******Welcome to bank NuBank*****");
 
         //declare a variable
-        Account myAccount;
+//        Account myAccount;
         //create an instance of Account
-        myAccount = new Account();
+        Account myAccount = new Account("12345678", "Nurul", 1000.0);
         //create second instance
-        SavingAccount yourAccount = new SavingAccount();
+        SavingAccount yourAccount = new SavingAccount("123456789", "Alam", 100000);
 
 //        myAccount.getAccountName();
-        myAccount.setAccountName("Nurul");
+//        myAccount.setAccountName("Nurul");
 //        myAccount.getAccountNumber();
-        myAccount.setAccountNumber("12345678");
+//        myAccount.setAccountNumber("12345678");
         myAccount.deposit(1110);
-//        myAccount.withdrawal(2000.0);
+        myAccount.withdraw(200.0);
         myAccount.getBalance();
         System.out.println("******************************************************");
         System.out.println("Name of account holder: " + myAccount.getAccountName());
@@ -29,12 +29,12 @@ public class NuBank {
 // Second account
         System.out.println("\n***********************************************");
 
-//        myAccount.getAccountName();
-        yourAccount.setAccountName("Alam");
-//        myAccount.getAccountNumber();
-        yourAccount.setAccountNumber("123456789");
+//        yourAccount.getAccountName();
+//        yourAccount.setAccountName("Alam");
+//        yourAccount.getAccountNumber();
+//        yourAccount.setAccountNumber("123456789");
         yourAccount.deposit(100000.0);
-//        myAccount.withdrawal(20000.0);
+        yourAccount.withdraw(20000.0);
         yourAccount.getBalance();
 
         System.out.println("Name of account holder: " + yourAccount.getAccountName());

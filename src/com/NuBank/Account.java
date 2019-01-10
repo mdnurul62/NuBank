@@ -5,6 +5,16 @@ public class Account {
     private String accountNumber;
     private String accountName;
     protected double balance;
+    //computer provide default constructor if we do not write explicitly write
+
+    //constructor
+
+
+    public Account(String accountNumber, String accountName, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountName = accountName;
+        this.balance = balance;
+    }
 
     public String getAccountNumber(){
         return accountNumber;
@@ -38,7 +48,9 @@ public class Account {
             balance = balance + amount;
         }
     }
-    public void withdrawal(double amount){
+
+
+    public void withdraw(double amount){
         if(amount <= 0) {
             throw new RuntimeException("It's not a valid amount.");
         } else if(amount > balance){
