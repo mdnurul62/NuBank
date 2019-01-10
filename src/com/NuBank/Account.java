@@ -1,6 +1,6 @@
 package com.NuBank;
 
-public class Account {
+public abstract class Account {
     //declare variable with access modifier public
     private String accountNumber;
     private String accountName;
@@ -56,8 +56,10 @@ public class Account {
         } else if(amount > balance){
             throw  new RuntimeException("not a sufficient balance");
         } else {
-            balance = balance - amount;
+            double chars = getCharges(amount);
+            balance = balance - (amount + chars);
         }
     }
+    protected abstract double getCharges(double amount);
 
 }

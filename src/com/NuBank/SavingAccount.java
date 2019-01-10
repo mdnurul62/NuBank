@@ -7,6 +7,7 @@ public class SavingAccount extends Account {
         super("123456789", "Alam", 10000.0);
     }
 
+
     @Override
     public void deposit(double amount){
         if(amount <= 0){
@@ -15,12 +16,12 @@ public class SavingAccount extends Account {
             balance = balance + amount + 0.10*amount;
         }
     }
-    @Override
-    public void withdraw(double amount){
-
-        super.withdraw(amount);
-        double charges = amount*0.01;
-        super.withdraw(charges);
+//    @Override
+//    public void withdraw(double amount){
+//
+//        super.withdraw(amount);
+//        double charges = amount*0.01;
+//        super.withdraw(charges);
 //        if(amount <= 0) {
 //            throw new RuntimeException("It's not a va9lid amount.");
 //        } else if(amount > balance){
@@ -28,5 +29,10 @@ public class SavingAccount extends Account {
 //        } else {
 //            balance = balance - amount - 0.01*amount;
 //        }
+//    }
+    @Override
+    protected double getCharges(double amount){
+        double charges = amount * 0.05;
+        return charges;
     }
 }

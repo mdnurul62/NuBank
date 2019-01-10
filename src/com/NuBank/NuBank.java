@@ -10,7 +10,7 @@ public class NuBank {
         //declare a variable
 //        Account myAccount;
         //create an instance of Account
-        Account myAccount = new Account("12345678", "Nurul", 1000.0);
+//        Account myAccount = new Account("12345678", "Nurul", 1000.0);
         //create second instance
         SavingAccount yourAccount = new SavingAccount("123456789", "Alam", 100000);
 
@@ -18,13 +18,13 @@ public class NuBank {
 //        myAccount.setAccountName("Nurul");
 //        myAccount.getAccountNumber();
 //        myAccount.setAccountNumber("12345678");
-        myAccount.deposit(1110);
-        myAccount.withdraw(200.0);
-        myAccount.getBalance();
-        System.out.println("******************************************************");
-        System.out.println("Name of account holder: " + myAccount.getAccountName());
-        System.out.println("Account number: " + myAccount.getAccountNumber());
-        System.out.println("Balance: " + myAccount.getBalance());
+//        myAccount.deposit(1110);
+//        myAccount.withdraw(200.0);
+//        myAccount.getBalance();
+//        System.out.println("******************************************************");
+//        System.out.println("Name of account holder: " + myAccount.getAccountName());
+//        System.out.println("Account number: " + myAccount.getAccountNumber());
+//        System.out.println("Balance: " + myAccount.getBalance());
 
 // Second account
         System.out.println("\n***********************************************");
